@@ -24,16 +24,28 @@ html {
   width: auto;
 }
 
+/* Navbar links */
+.topnavleft a {
+  float: left;
+  font-family: 'Poppins';
+  font-size: 18px;
+  color: #f2f2f2;
+}
+
+.topnavleft a:hover {
+  color: #99ff99;
+  font-weight: bold;
+}
 
 /* Navbar links */
-.topnavleft1 a {
-  float: left;
+.topnavright1 a {
+  float: right;
   font-family: 'Poppins';
   font-size: 18px;
   color: #40394A;
 }
 
-.topnavleft1 a:hover {
+.topnavright1 a:hover {
   color: #99ff99;
   font-weight: bold;
 }
