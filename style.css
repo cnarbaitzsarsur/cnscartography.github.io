@@ -107,11 +107,12 @@ h3 {
 
 /* 4th most important texts*/
 h4 {
-  font-family: 'Poppins black';
-  font-size: 30px;
+  margin-top: 100px;
+  font-weight: bold;
+  font-family: 'Poppins';
+  font-size: 40px;
+  color: black;
   text-align: center;
-  color: #40394A;
-  padding: 0px 20px;
 }
 
 /* paragraphs */
@@ -175,19 +176,27 @@ p {
   width: 100%;
   height: auto;
   display: block;
+  filter: grayscale(90%);
 }
 
 .container:hover img {
-  opacity: 0.3;
+  filter: grayscale(0%);
 }
 
 .text-centered{
   font-size: 1.5rem;
+  font-family: 'montserrat';
   line-height: 2;
-  padding: 0 6rem;
-  color: white;
-  transform: translateY(-13rem);
+  padding: 0 0rem;
+  color: #9f9ca5;
+  background-color: #99ff99;
+  transform: translateY(-5rem);
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
+}
+
+.text-centered:hover {
+  background-color: #9f9ca5;
+  color: #99ff99;
 }
