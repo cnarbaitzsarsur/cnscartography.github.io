@@ -5,13 +5,34 @@ html {
   height: 100%;
   font-family: 'poppins';
   font-size: 13px;
+  cursor: crosshair;
 }
 
+/*Content on the right*/
+.leftcontent {
+  width: 50%;
+  height: 760px;
+  float: left;
+  cursor: crosshair;
+  resize: none;
+}
+
+.rightcontent {
+  width: 50%;
+  height: 760px;
+  float: right;
+  cursor: crosshair;
+}
 
 /* Navigation bar*/
 .navcontainer {
   overflow: hidden;
   background-color:rgba(249,249,249,0);
+  cursor: crosshair;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .navcontainer a {
@@ -21,7 +42,7 @@ html {
   list-style: none;  /* remove bullets from list items */
   margin: 20px;
   margin-bottom: 0px;  /* compensate for margin-bottom on list items */
-  width: auto;
+
 }
 
 /* Navbar links */
@@ -29,7 +50,8 @@ html {
   float: left;
   font-family: 'Poppins';
   font-size: 18px;
-  color: #f2f2f2;
+  color: black;
+  cursor: crosshair;
 }
 
 .topnavleft a:hover {
@@ -48,4 +70,124 @@ html {
 .topnavright1 a:hover {
   color: #99ff99;
   font-weight: bold;
+}
+
+/* Most important texts*/
+h1 {
+  margin-top: 200px;
+  margin-left: 50px;
+  font-weight: bold;
+  font-family: 'Poppins';
+  font-size: 50px;
+  color: black;
+  text-align: left;
+}
+
+/* 2nd most important texts*/
+h2 {
+  font-weight: bold;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: 'Poppins';
+  font-size: 18px;
+  text-align: right;
+  font-weight: 200;
+  color: black;
+}
+
+/* 3rd most important texts*/
+h3 {
+  margin-top: 200px;
+  font-weight: bold;
+  font-family: 'Poppins';
+  font-size: 40px;
+  color: black;
+  text-align: center;
+}
+
+/* 4th most important texts*/
+h4 {
+  font-family: 'Poppins black';
+  font-size: 30px;
+  text-align: center;
+  color: #40394A;
+  padding: 0px 20px;
+}
+
+/* paragraphs */
+p {
+  font-weight: normal;
+  font-family: 'montserrat';
+  font-size: 18px;
+  text-align: center;
+  color: #40394A;
+  padding: 0px 20px;
+  line-height: 1.6;
+}
+
+.button-container {
+  height: 200px;
+  position: relative;
+  cursor: crosshair;
+}
+
+.button-container .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.button {
+  background-color: #99ff99;
+  border: none;
+  color: #40394A;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 25%;
+  margin: 20px;
+  cursor: crosshair;
+}
+
+.button:hover {
+  opacity: 50%;
+  background-color: #40394A;
+  color: #99ff99;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,300px));
+  grid-gap: 3rem;
+  grid-template-rows: auto;
+  margin: 3rem 0;
+  padding: 0 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.container img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container:hover img {
+  opacity: 0.3;
+}
+
+.text-centered{
+  font-size: 1.5rem;
+  line-height: 2;
+  padding: 0 6rem;
+  color: white;
+  transform: translateY(-13rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
 }
