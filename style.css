@@ -225,7 +225,7 @@
     transition: opacity 0.3s ease;
     opacity: 1;
     font-size: 2em ;
-    transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
     text-align: center;
     font-family: 'Montserrat';
     font-weight: 100;
