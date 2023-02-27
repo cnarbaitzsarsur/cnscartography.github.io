@@ -13,9 +13,11 @@
     color: black;
   }
 
- /* Media queries for responsive design */
 
-    /*Content on the left*/
+
+/* --------------- HOME PAGE --------------- */
+
+  /*Content on the left*/
     @media only screen and (min-width: 768px) {
     .leftcontent {
       width: 50%;
@@ -27,7 +29,7 @@
       background-position: center;
     }
 
-      /*Content on the left*/
+    /*Content on the right*/
     .rightcontent {
       display: block; /* show on screens larger than 768px */
       width: 50%;
@@ -37,166 +39,167 @@
     }
   }
 
-  @media only screen and (max-width: 768px) {
-    .leftcontent {
-      width: 100%; /* set width to 100% on screens larger than 768px */
+  /* Responsive design */
+
+    @media only screen and (max-width: 768px) {
+      .leftcontent {
+        width: 100%; /* set width to 100% on screens larger than 768px */
+      }
+
+      .rightcontent {
+        background-image: url('path/to/image.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h2 {
+        font-weight: bold;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-family: 'Poppins';
+        font-size: 18px;
+        text-align: center;
+        font-weight: 200;
+        color: black;
+      }
+
+
     }
 
-    .rightcontent {
-      background-image: url('path/to/image.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
+/* --------------- NAVIGATION BAR --------------- */
+
+      .navcontainer {
+        overflow: hidden;
+        background-color:rgba(249,249,249,0);
+        cursor: crosshair;
+        width: 100%;
+        position: fixed;
+        top: 0;
+      }
+
+      .navcontainer a {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        list-style: none;  /* remove bullets from list items */
+        margin: 20px;
+        margin-bottom: 0px;  /* compensate for margin-bottom on list items */
+
+      }
+
+      /* Navbar links */
+      .topnavleft a {
+        float: left;
+        font-family: 'Poppins';
+        font-size: 18px;
+        color: black;
+        cursor: crosshair;
+      }
+
+      .topnavleft a:hover {
+        color: #99ff99;
+        font-weight: bold;
+      }
+
+      .topnavright1 a {
+        float: right;
+        font-family: 'Poppins';
+        font-size: 18px;
+        color: #40394A;
+      }
+
+      .topnavright1 a:hover {
+        color: #99ff99;
+        font-weight: bold;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .navcontainer {
+          text-align: center;
+        }
+        
+        .navcontainer a {
+          float: none;
+          display: inline-block;
+        }
+        
+        .topnavleft, .topnavright1 {
+          width: 100%;
+          text-align: center;
+        }
+        
+        .topnavleft a {
+          float: none;
+          margin: 1em 0;
+        }
+        
+        .topnavright1 a {
+          float: none;
+          margin: 1em 0;
+        }
+      }  
+
+/* --------------- TEXTS --------------- */
+
+  /* h1 */
+
+    h1 {
+      margin-top: 5em;
+      margin-left: 1em;
+      font-weight: bold;
+      font-family: 'Poppins';
+      font-size: 4em;
+      color: black;
+      text-align: left;
     }
+
+    /* Responsive design */
+
+    @media only screen and (max-width: 768px) {
+      h1 {
+      margin-top: 3em;
+      text-align: center;
+      margin-left: 0em;
+      }
+    }
+
+  /* h2 */
 
     h2 {
       font-weight: bold;
-      margin-left: 1em;
-      margin-right: 1em;
+      margin-left: 50px;
+      margin-right: 50px;
       font-family: 'Poppins';
       font-size: 18px;
-      text-align: center;
+      text-align: right;
       font-weight: 200;
       color: black;
     }
 
+  /* h3 */
 
-  }
-
-  /* Navigation bar*/
-  .navcontainer {
-    overflow: hidden;
-    background-color:rgba(249,249,249,0);
-    cursor: crosshair;
-    width: 100%;
-    position: fixed;
-    top: 0;
-  }
-
-  .navcontainer a {
-    float: left;
-    text-align: center;
-    padding: 14px 16px;
-    list-style: none;  /* remove bullets from list items */
-    margin: 20px;
-    margin-bottom: 0px;  /* compensate for margin-bottom on list items */
-
-  }
-
-  /* Navbar links */
-  .topnavleft a {
-    float: left;
-    font-family: 'Poppins';
-    font-size: 18px;
-    color: black;
-    cursor: crosshair;
-  }
-
-  .topnavleft a:hover {
-    color: #99ff99;
-    font-weight: bold;
-  }
-
-  /* Navbar links */
-  .topnavright1 a {
-    float: right;
-    font-family: 'Poppins';
-    font-size: 18px;
-    color: #40394A;
-  }
-
-  .topnavright1 a:hover {
-    color: #99ff99;
-    font-weight: bold;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .navcontainer {
+    h3 {
+      margin-top: 4em;
+      margin-bottom: 0em;
+      font-weight: bold;
+      font-family: 'Poppins';
+      font-size: 40px;
+      color: black;
       text-align: center;
     }
-    
-    .navcontainer a {
-      float: none;
-      display: inline-block;
-    }
-    
-    .topnavleft, .topnavright1 {
-      width: 100%;
+
+  /* h4 */
+
+    h4 {
+      margin-top: 100px;
+      font-weight: bold;
+      font-family: 'Poppins';
+      font-size: 40px;
+      color: black;
       text-align: center;
     }
-    
-    .topnavleft a {
-      float: none;
-      margin: 1em 0;
-    }
-    
-    .topnavright1 a {
-      float: none;
-      margin: 1em 0;
-    }
-  }  
 
-  /* Most important texts*/
-  h1 {
-    margin-top: 5em;
-    margin-left: 1em;
-    font-weight: bold;
-    font-family: 'Poppins';
-    font-size: 4em;
-    color: black;
-    text-align: left;
-  }
-
-  @media only screen and (max-width: 768px) {
-    h1 {
-    margin-top: 3em;
-    text-align: center;
-    margin-left: 0em;
-    }
-  }
-
-  /* 2nd most important texts*/
-  h2 {
-    font-weight: bold;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-family: 'Poppins';
-    font-size: 18px;
-    text-align: right;
-    font-weight: 200;
-    color: black;
-  }
-
-  /* titles pages*/
-  h3 {
-    margin-top: 4em;
-    margin-bottom: 0em;
-    font-weight: bold;
-    font-family: 'Poppins';
-    font-size: 40px;
-    color: black;
-    text-align: center;
-  }
-
-  /* 4th most important texts*/
-  h4 {
-    margin-top: 100px;
-    font-weight: bold;
-    font-family: 'Poppins';
-    font-size: 40px;
-    color: black;
-    text-align: center;
-  }
-
-  /* paragraphs */
-  p {
-    font-weight: normal;
-    font-family: 'montserrat';
-    font-size: 1.2em;
-    text-align: center;
-    color: #40394A;
-    padding: 3em;
-    line-height: 1.6;
-  }
+  /* h5 */
 
   h5 {
     font-weight: normal;
@@ -207,9 +210,23 @@
     padding: 40% 10px;
     line-height: 1.6;
   }
+    
+  /* paragraphs */
+
+    p {
+      font-weight: normal;
+      font-family: 'montserrat';
+      font-size: 1.2em;
+      text-align: center;
+      color: #40394A;
+      padding: 1em;
+      line-height: 1.6;
+    }
+
+/* --------------- BUTTONS --------------- */
 
   .button-container {
-    height: 75px;
+    height: 10em;
     position: relative;
     cursor: crosshair;
   }
@@ -243,119 +260,134 @@
     color: #99ff99;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
-    grid-gap: 3rem;
-    grid-template-rows: auto;
-    margin: 3rem 0;
-    padding: 0 3rem;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .grid2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
-    grid-gap: 3rem;
-    grid-template-rows: auto;
-    margin: 3rem 0;
-    padding: 1rem 3rem;
-    justify-content: center;
-    align-items: center;
-  }
+/* --------------- GRIDS MY WORK --------------- */
 
-  .container{
-    position: relative;
-  }
+  /* grid my work */
 
-  .container img{
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: grayscale(90%);
-    cursor: crosshair;
-  }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(561px,561px));
+      grid-gap: 3rem;
+      grid-template-rows: auto;
+      margin: 3rem 0;
+      padding: 0 3rem;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .container .text{
-    opacity: 0;
-  }
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(561px,561px));
+      grid-gap: 3rem;
+      grid-template-rows: auto;
+      margin: 3rem 0;
+      padding: 1rem 3rem;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .container .textblack{
-    opacity: 0;
-  }
+  /* Adaptive grid my work */
+
+    @media only screen and (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(1, minmax(561px, 561px));
+      }
+    }
 
 
-  .container:hover img {
-    filter: brightness(50%);
-  }
+  /* container my work */
 
-  .container:hover .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: #fff;
-    opacity: 50%;
-    transition: opacity 0.3s ease;
-    opacity: 1;
-    font-size: 2em ;
-    transition: opacity 0.6s ease-in-out;
-    text-align: center;
-    font-family: 'Montserrat';
-    font-weight: 100;
-  }
+    .container{
+      position: relative;
+    }
 
-  .container:hover .textblack {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: #000;
-    opacity: 50%;
-    transition: opacity 0.3s ease;
-    opacity: 1;
-    font-size: 2em ;
-    transition: opacity 0.6s ease-in-out;
-    text-align: center;
-    font-family: 'Montserrat';
-    font-weight: 100;
-  }
+    .container img{
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(90%);
+      cursor: crosshair;
+    }
+
+    .container .text{
+      opacity: 0;
+    }
+
+    .container .textblack{
+      opacity: 0;
+    }
+
+    .container:hover img {
+      filter: brightness(50%);
+    }
+
+    .container:hover .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: #fff;
+      opacity: 50%;
+      transition: opacity 0.3s ease;
+      opacity: 1;
+      font-size: 2em ;
+      transition: opacity 0.6s ease-in-out;
+      text-align: center;
+      font-family: 'Montserrat';
+      font-weight: 100;
+    }
+
+    .container:hover .textblack {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: #000;
+      opacity: 50%;
+      transition: opacity 0.3s ease;
+      opacity: 1;
+      font-size: 2em ;
+      transition: opacity 0.6s ease-in-out;
+      text-align: center;
+      font-family: 'Montserrat';
+      font-weight: 100;
+    }
+
+/* --------------- GRID PROJECT PAGES --------------- */
 
   .gridprojects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
+    grid-template-columns: repeat(2, minmax(561px,561px));
     grid-gap: 3rem;
     grid-template-rows: auto;
     margin: 3rem 0;
-    padding: 0 3rem;
     justify-content: center;
     justify-items: center;
   }
 
-  /*display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
-    grid-gap: 3rem;
-    grid-template-rows: auto;
-    margin: 3rem 0;
-    padding: 0 3rem;
-    justify-content: center;
-    align-items: center;*/
+  .img-container {
+    width: 100%;
+  }  
+
+  .img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: crosshair;
+  }
+
+  /* Adaptive grid my work */
 
   @media only screen and (max-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
-    grid-gap: 3rem;
-    grid-template-rows: auto;
-    margin: 3rem 0;
-    padding: 0 3rem;
-    justify-content: center;
-    justify-items: center;
+    .gridprojects {
+      grid-template-columns: repeat(1, minmax(561px, 561px));
+    }
   }
 
-
+/* ---------------  --------------- */
 
   .imageBox {
     position: relative;
@@ -383,12 +415,16 @@
     cursor: crosshair;
     }
 
+/* --------------- VIDEO --------------- */
+
   .video-container {
     width: 80%;
     height: 0;
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     align-content: center;
+    margin-left: 50vw;
+  transform: translate(-50%);
   }
   
   .video-container iframe {
