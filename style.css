@@ -8,21 +8,58 @@
     cursor: crosshair;
   }
 
-  /*Content on the left*/
-  .leftcontent {
-    width: 50%;
-    float: left;
-    cursor: crosshair;
-    resize: none;
+  ::selection {
+    background-color: #99ff99;
+    color: black;
   }
 
+ /* Media queries for responsive design */
+
     /*Content on the left*/
-  .rightcontent {
-    display: block; /* show on screens larger than 768px */
-    width: 50%;
-    height: 100vh; /* set height to full viewport height */
-    float: right;
-    cursor: crosshair;
+    @media only screen and (min-width: 768px) {
+    .leftcontent {
+      width: 50%;
+      float: left;
+      cursor: crosshair;
+      resize: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+      /*Content on the left*/
+    .rightcontent {
+      display: block; /* show on screens larger than 768px */
+      width: 50%;
+      height: 100vh; /* set height to full viewport height */
+      float: right;
+      cursor: crosshair;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .leftcontent {
+      width: 100%; /* set width to 100% on screens larger than 768px */
+    }
+
+    .rightcontent {
+      background-image: url('path/to/image.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    h2 {
+      font-weight: bold;
+      margin-left: 1em;
+      margin-right: 1em;
+      font-family: 'Poppins';
+      font-size: 18px;
+      text-align: center;
+      font-weight: 200;
+      color: black;
+    }
+
+
   }
 
   /* Navigation bar*/
@@ -72,15 +109,49 @@
     font-weight: bold;
   }
 
+  @media only screen and (max-width: 768px) {
+    .navcontainer {
+      text-align: center;
+    }
+    
+    .navcontainer a {
+      float: none;
+      display: inline-block;
+    }
+    
+    .topnavleft, .topnavright1 {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .topnavleft a {
+      float: none;
+      margin: 1em 0;
+    }
+    
+    .topnavright1 a {
+      float: none;
+      margin: 1em 0;
+    }
+  }  
+
   /* Most important texts*/
   h1 {
-    margin-top: 200px;
-    margin-left: 50px;
+    margin-top: 5em;
+    margin-left: 1em;
     font-weight: bold;
     font-family: 'Poppins';
-    font-size: 50px;
+    font-size: 4em;
     color: black;
     text-align: left;
+  }
+
+  @media only screen and (max-width: 768px) {
+    h1 {
+    margin-top: 3em;
+    text-align: center;
+    margin-left: 0em;
+    }
   }
 
   /* 2nd most important texts*/
@@ -95,9 +166,10 @@
     color: black;
   }
 
-  /* 3rd most important texts*/
+  /* titles pages*/
   h3 {
-    margin-top: 100px;
+    margin-top: 4em;
+    margin-bottom: 0em;
     font-weight: bold;
     font-family: 'Poppins';
     font-size: 40px;
@@ -119,10 +191,10 @@
   p {
     font-weight: normal;
     font-family: 'montserrat';
-    font-size: 14px;
+    font-size: 1.2em;
     text-align: center;
     color: #40394A;
-    padding: 25px 150px;
+    padding: 3em;
     line-height: 1.6;
   }
 
@@ -173,7 +245,7 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px,500px));
+    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
     grid-gap: 3rem;
     grid-template-rows: auto;
     margin: 3rem 0;
@@ -184,7 +256,7 @@
 
   .grid2 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px,500px));
+    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
     grid-gap: 3rem;
     grid-template-rows: auto;
     margin: 3rem 0;
@@ -209,6 +281,10 @@
     opacity: 0;
   }
 
+  .container .textblack{
+    opacity: 0;
+  }
+
 
   .container:hover img {
     filter: brightness(50%);
@@ -229,28 +305,28 @@
     text-align: center;
     font-family: 'Montserrat';
     font-weight: 100;
-
-  /*.text-centered{
-    font-size: 1.5rem;
-    font-family: 'montserrat';
-    line-height: 2;
-    padding: 0 0rem;
-    color: #9f9ca5;
-    background-color: #99ff99;
-    transform: translateY(-5rem);
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: center;
   }
 
-  .text-centered:hover {
-    background-color: #9f9ca5;
-    color: #99ff99;
-  }*/
+  .container:hover .textblack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #000;
+    opacity: 50%;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    font-size: 2em ;
+    transition: opacity 0.6s ease-in-out;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
 
   .gridprojects {
     display: grid;
-    grid-template-columns: repeat(2, minmax(37.5%,400px));
+    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
     grid-gap: 3rem;
     grid-template-rows: auto;
     margin: 3rem 0;
@@ -258,6 +334,28 @@
     justify-content: center;
     justify-items: center;
   }
+
+  /*display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
+    grid-gap: 3rem;
+    grid-template-rows: auto;
+    margin: 3rem 0;
+    padding: 0 3rem;
+    justify-content: center;
+    align-items: center;*/
+
+  @media only screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(561px,561px));
+    grid-gap: 3rem;
+    grid-template-rows: auto;
+    margin: 3rem 0;
+    padding: 0 3rem;
+    justify-content: center;
+    justify-items: center;
+  }
+
+
 
   .imageBox {
     position: relative;
@@ -285,19 +383,24 @@
     cursor: crosshair;
     }
 
-  ::selection {
-    background-color: #99ff99;
-    color: black;
+  .video-container {
+    width: 80%;
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    align-content: center;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
-/* Media queries for responsive design */
-  @media only screen and (max-width: 768px) {
-    .leftcontent {
-      width: 100%; /* set width to 100% on screens larger than 768px */
-    }
+  
 
-    .rightcontent {
-      display: none;
-    }
 
-  }
+
+  
