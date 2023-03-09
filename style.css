@@ -1,5 +1,6 @@
 /* no paddings or margins for page, use full height */
-  html {
+  
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -389,22 +390,6 @@
 
 /* ---------------  --------------- */
 
-  .imageBox {
-    position: relative;
-    float: left;
-  }
-
-  .imageBox .hoverImg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-  }
-
-  .imageBox:hover .hoverImg {
-    display: block;
-  }
-
   .link {
     color: black;
     cursor: crosshair;
@@ -435,7 +420,60 @@
     height: 100%;
   }
 
-  
+/* --------------- ABOUT ME PAGE --------------- */
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* add this to create space between columns */
+  margin: 10rem 5rem;
+}
+
+.container1 > div {
+  width: calc(33.33% - 10px); /* subtracting margin to create space between columns */
+}
+
+
+.container2 {
+  position: relative;
+  float: left;
+  width: 33%;
+}
+
+.container2 .imgME img{
+  width: 100%;
+}
+
+.container2 .hoverImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 33%;
+}
+
+.container2:hover .hoverImg {
+  display: block;
+  width: 33%;
+}
+
+
+@media (max-width: 600px) {
+  .container2 {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .container1 {
+    flex-wrap: wrap;
+    justify-content: center; /* center columns on mobile */
+  }
+  .container1 > div {
+    width: 100%;
+    margin-bottom: 20px; /* add margin to separate columns on mobile */
+  }
+}
 
 
 
