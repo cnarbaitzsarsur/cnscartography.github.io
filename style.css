@@ -75,6 +75,7 @@ html {
         width: 100%;
         position: fixed;
         top: 0;
+        z-index: 1;
       }
 
       .navcontainer a {
@@ -219,7 +220,7 @@ html {
       font-size: 1.2em;
       text-align: center;
       color: #40394A;
-      padding: 1em;
+      padding: 3em;
       line-height: 1.6;
     }
 
