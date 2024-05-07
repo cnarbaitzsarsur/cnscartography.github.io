@@ -30,14 +30,16 @@ body{
 }
 
 
-
-/* --------------- HOME PAGE --------------- */
+/* --- Home Page --- */
 
   /*Content on the left*/
   .leftcontent {
     flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 20px; 
     overflow-y: auto;
+    align-content: baseline;
   }
 
   .content {
@@ -48,211 +50,112 @@ body{
   .rightcontent {
     flex: 1;
     overflow: hidden;
+    height: 100%;
+    width: 50vh;
+  }
+
+/* --- Navigation Bar --- */
+
+.navcontainer {
+  overflow: hidden;
+  background-color:rgba(249,249,249,0);
+  cursor: crosshair;
+  margin-bottom: auto;
+}
+
+.topnavleft {
+  display: flex;
+}
+
+.topnavleft a {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-wrap: nowrap;
+}
+
+.topnavleft a:hover {
+  color: #99ff99;
+  font-weight: bold;
+}
+
+.topnavright1 a {
+  float: right;
+  font-family: 'Poppins';
+  font-size: 18px;
+  color: #40394A;
+}
+
+.topnavright1 a:hover {
+  color: #99ff99;
+  font-weight: bold;
+}
+/* --- Texts --- */
+
+  h1 {
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 4em;
+    color: black;
+    text-align: left;
   }
 
 
+  h2 {
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 1.5em;
+    text-align: right;
+    font-weight: 200;
+    color: black;
+  }
+
+
+  h3 {
+    margin-top: 2em;
+    margin-bottom: 0em;
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 40px;
+    color: black;
+    text-align: center;
+  }
+
+
+  h4 {
+    margin-top: 100px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 40px;
+    color: black;
+    text-align: center;
+  }
+
+
+h5 {
+  font-weight: normal;
+  font-family: 'montserrat';
+  font-size: 14px;
+  text-align: end;
+  color: #40394A;
+  padding: 40% 10px;
+  line-height: 1.6;
+}
   
-  /* Responsive design */
 
-    @media only screen and (max-width: 768px) {
-      
-      .coverpage{
-        flex-direction: column;
-      }
-      
-      .right-content {
-        width: 100%; /* Make both sections full width */
-        height: 50vh; /* Make both sections half height */
-      }
-
-      .leftcontent {
-        order: 1;
-        overflow: hidden;
-      }
-
-      .leftcontent h1 {
-        margin-top: 1em;
-        margin-right: 1em;
-        font-size: 3em;
-        text-align: right;
-      }
-
-      .leftcontent h2 {
-        font-size: 1em;
-        text-align: right;
-      }
-
-      .rightcontent {
-        order: 2;
-      }
-
-      h2 {
-        font-weight: bold;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-family: 'Poppins';
-        font-size: 12px;
-        text-align: center;
-        font-weight: 200;
-        color: black;
-      }
-
-
-    }
-
-/* --------------- NAVIGATION BAR --------------- */
-
-      .navcontainer {
-        overflow: hidden;
-        background-color:rgba(249,249,249,0);
-        cursor: crosshair;
-        width: 100%;
-      }
-
-      .topnavleft {
-        display: flex;
-      }
-
-      .topnavleft a {
-        margin-right: 20px;
-        margin-left: 20px;
-        color: #000;
-        text-decoration: none;
-        font-size: 1.5em;
-      }
-
-      .topnavleft a:hover {
-        color: #99ff99;
-        font-weight: bold;
-      }
-
-      .topnavright1 a {
-        float: right;
-        font-family: 'Poppins';
-        font-size: 18px;
-        color: #40394A;
-      }
-
-      .topnavright1 a:hover {
-        color: #99ff99;
-        font-weight: bold;
-      }
-
-      @media only screen and (max-width: 768px) {
-        .navcontainer {
-          text-align: center;
-        }
-        
-        .navcontainer a {
-          float: none;
-          display: inline-block;
-        }
-        
-        .topnavleft, .topnavright1 {
-          justify-content: center;
-        }
-        
-        .topnavleft a {
-          float: none;
-          margin: 2em 1em;
-        }
-        
-        .topnavright1 a {
-          float: none;
-          margin: 1em 0;
-        }
-      }  
-
-/* --------------- TEXTS --------------- */
-
-  /* h1 */
-
-    h1 {
-      margin-top: 5em;
-      margin-left: 1em;
-      font-weight: bold;
-      font-family: 'Poppins';
-      font-size: 4em;
-      color: black;
-      text-align: left;
-    }
-
-  /* h2 */
-
-    h2 {
-      font-weight: bold;
-      margin-left: 50px;
-      margin-right: 50px;
-      font-family: 'Poppins';
-      font-size: 1.5em;
-      text-align: right;
-      font-weight: 200;
-      color: black;
-    }
-
-  /* h3 */
-
-    h3 {
-      margin-top: 2em;
-      margin-bottom: 0em;
-      font-weight: bold;
-      font-family: 'Poppins';
-      font-size: 40px;
-      color: black;
-      text-align: center;
-    }
-
-  /* h4 */
-
-    h4 {
-      margin-top: 100px;
-      font-weight: bold;
-      font-family: 'Poppins';
-      font-size: 40px;
-      color: black;
-      text-align: center;
-    }
-
-  /* h5 */
-
-  h5 {
+  p {
     font-weight: normal;
     font-family: 'montserrat';
-    font-size: 14px;
-    text-align: end;
+    font-size: 1.2em;
+    text-align: center;
     color: #40394A;
-    padding: 40% 10px;
+    padding: 3em;
     line-height: 1.6;
   }
-    
-  /* paragraphs */
 
-    p {
-      font-weight: normal;
-      font-family: 'montserrat';
-      font-size: 1.2em;
-      text-align: center;
-      color: #40394A;
-      padding: 3em;
-      line-height: 1.6;
-    }
-
-     /* Responsive design */
-
-     @media only screen and (max-width: 768px) {
-      h1 {
-      margin-top: 3em;
-      text-align: center;
-      margin-left: 0em;
-      }
-      
-      p {
-        max-width: 90%;
-      }
-      
-    }
-
-/* --------------- BUTTONS --------------- */
+  /* --- Buttons --- */
 
   .button-container {
     height: 10em;
@@ -290,120 +193,86 @@ body{
   }
 
 
-/* --------------- GRIDS MY WORK --------------- */
+/* --- Grids My Work --- */
 
-  /* grid my work */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 3rem;
+    grid-template-rows: auto;
+    margin: 3rem 0;
+    padding: 0 3rem;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      grid-gap: 3rem;
-      grid-template-rows: auto;
-      margin: 3rem 0;
-      padding: 0 3rem;
-      justify-content: center;
-      align-items: center;
-    }
+  .container{
+    position: relative;
+  }
 
-  /* Adaptive grid my work */
+  .container img{
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(90%);
+    cursor: crosshair;
+  }
 
-        /* For medium screens, display 3 columns */
-    @media only screen and (max-width: 1200px) {
-      .grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
+  .container .text{
+    opacity: 0;
+  }
 
-    /* For small screens, display 2 columns */
-    @media only screen and (max-width: 768px) {
-      .grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
+  .container .textblack{
+    opacity: 0;
+  }
 
-    /* For extra small screens, display 1 column */
-    @media only screen and (max-width: 576px) {
-      .grid {
-          grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
-    }
+  .container:hover img {
+    filter: brightness(50%);
+  }
 
+  .container:hover .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    opacity: 50%;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    font-size: 2em ;
+    transition: opacity 0.6s ease-in-out;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
 
-  /* container my work */
+  .container:hover .textblack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #000;
+    opacity: 50%;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    font-size: 2em ;
+    transition: opacity 0.6s ease-in-out;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 100;
+  }
 
-    .container{
-      position: relative;
-    }
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
-    .container img{
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: grayscale(90%);
-      cursor: crosshair;
-    }
-
-    .container .text{
-      opacity: 0;
-    }
-
-    .container .textblack{
-      opacity: 0;
-    }
-
-    .container:hover img {
-      filter: brightness(50%);
-    }
-
-    .container:hover .text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      color: #fff;
-      opacity: 50%;
-      transition: opacity 0.3s ease;
-      opacity: 1;
-      font-size: 2em ;
-      transition: opacity 0.6s ease-in-out;
-      text-align: center;
-      font-family: 'Montserrat';
-      font-weight: 100;
-    }
-
-    .container:hover .textblack {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      color: #000;
-      opacity: 50%;
-      transition: opacity 0.3s ease;
-      opacity: 1;
-      font-size: 2em ;
-      transition: opacity 0.6s ease-in-out;
-      text-align: center;
-      font-family: 'Montserrat';
-      font-weight: 100;
-    }
-
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-/* --------------- GRID PROJECT PAGES --------------- */
+  /* --- Grid project pages --- */
 
   .gridprojects {
     display: grid;
@@ -426,27 +295,7 @@ body{
     cursor: crosshair;
   }
 
-  /* Adaptive grid my work */
-
-  @media only screen and (max-width: 768px) {
-    .gridprojects {
-      grid-template-columns: repeat(1, minmax(561px, 561px));
-    }
-  }
-
-/* ---------------  --------------- */
-
-  .link {
-    color: black;
-    cursor: crosshair;
-    }
-
-  .link:hover {
-    color: #99ff99;
-    cursor: crosshair;
-    }
-
-/* --------------- VIDEO --------------- */
+  /* --- Video --- */
 
   .video-container {
     width: 80%;
@@ -466,7 +315,7 @@ body{
     height: 100%;
   }
 
-/* --------------- ABOUT ME PAGE --------------- */
+/* ---- About Me page --- */
 
 .container1 {
   display: flex;
@@ -503,14 +352,138 @@ body{
   width: 33%;
 }
 
+.link {
+  color: black;
+  cursor: crosshair;
+}
 
-@media (max-width: 600px) {
+.link:hover {
+  color: #99ff99;
+  cursor: crosshair;
+}
+  
+/* --------------- RESPONSIVE DESIGN --------------- */
+
+/* For medium screens, display 3 columns */
+  
+@media only screen and (max-width: 1200px) {
+
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+     
+/* For small screens, display 2 columns */
+
+@media only screen and (max-width: 910px) {
+      
+    .coverpage{
+      flex-direction: column;
+    }
+    
+    .rightcontent {
+      width: 100%; /* Make both sections full width */
+      height: 50vh; /* Make both sections half height */
+    }
+
+    .leftcontent {
+      order: 1;
+      overflow: hidden;
+      height: 50vh; /* Make both sections half height */
+    }
+
+    .leftcontent h1 {
+      margin: 0;
+      font-size: 3em;
+      text-align: right;
+    }
+
+    .leftcontent h2 {
+      font-size: 1em;
+      text-align: right;
+    }
+
+    .content {
+      margin: 0%;
+    }
+
+    .rightcontent {
+      order: 2;
+    }
+
+    .rightcontent
+    h2 {
+      font-weight: bold;
+      font-family: 'Poppins';
+      font-size: 12px;
+      text-align: center;
+      font-weight: 200;
+      color: black;
+    }
+
+  .navcontainer {
+    text-align: center;
+  }
+
+  .navcontainer a {
+    float: none;
+    display: inline-block;
+  }
+  
+  .topnavleft, .topnavright1 {
+    justify-content: center;
+  }
+  
+  .topnavleft a {
+    float: none;
+    margin: 1em 1em;
+  }
+  
+  .topnavright1 a {
+    float: none;
+    margin: 1em 0;
+  }
+
+
+/* --- Navigation Bar ex --- */
+
+
+  h1 {
+    margin-top: 3em;
+    text-align: center;
+    margin-left: 0em;
+    }
+    
+    p {
+      max-width: 90%;
+    }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gridprojects {
+  grid-template-columns: repeat(1, minmax(561px, 561px));
+}
+
+.bd-placeholder-img-lg {
+  font-size: 3.5rem;
+}
+    
+}  
+
+/* For extra small screens, display 1 column */
+    
+@media only screen and (max-width: 576px) {
+
+  .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .container2 {
     flex-direction: column;
   }
-}
 
-@media (max-width: 600px) {
   .container1 {
     flex-wrap: wrap;
     justify-content: center; /* center columns on mobile */
