@@ -43,7 +43,7 @@ body{
   }
 
   .content {
-    margin-top: 20px;
+    margin-top: auto;
   }
 
   /*Content on the right*/
@@ -60,7 +60,6 @@ body{
   overflow: hidden;
   background-color:rgba(249,249,249,0);
   cursor: crosshair;
-  margin-bottom: auto;
 }
 
 .topnavleft {
@@ -403,10 +402,6 @@ h5 {
       text-align: right;
     }
 
-    .content {
-      margin: 0%;
-    }
-
     .rightcontent {
       order: 2;
     }
@@ -428,6 +423,7 @@ h5 {
   .navcontainer a {
     float: none;
     display: inline-block;
+    font-size: 1em;
   }
   
   .topnavleft, .topnavright1 {
@@ -443,10 +439,6 @@ h5 {
     float: none;
     margin: 1em 0;
   }
-
-
-/* --- Navigation Bar ex --- */
-
 
   h1 {
     margin-top: 3em;
