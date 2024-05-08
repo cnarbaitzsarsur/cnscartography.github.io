@@ -1,5 +1,5 @@
 /* no paddings or margins for page, use full height */
-  
+
 html {
     margin: 0;
     padding: 0;
@@ -64,11 +64,12 @@ body{
 
 .topnavleft {
   display: flex;
+  padding: 2em 2em;
 }
 
 .topnavleft a {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 1em;
+  margin-left: 1em;
   color: #000;
   text-decoration: none;
   font-size: 1.5em;
@@ -113,7 +114,7 @@ body{
 
 
   h3 {
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 0em;
     font-weight: bold;
     font-family: 'Poppins';
@@ -144,15 +145,15 @@ h5 {
 }
   
 
-  p {
-    font-weight: normal;
-    font-family: 'montserrat';
-    font-size: 1.2em;
-    text-align: center;
-    color: #40394A;
-    padding: 1em;
-    line-height: 1.6;
-  }
+p {
+  font-weight: 500;
+  font-family: 'montserrat';
+  font-size: 1.2em;
+  text-align: center;
+  color: #40394A;
+  padding: 1em 20em;
+  line-height: 1.6;
+}
 
   /* --- Buttons --- */
 
@@ -274,12 +275,13 @@ h5 {
   .filternav {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 2em 2em;
+    flex-wrap: wrap;
   }
 
-  .filter-btn {
-    margin: 0 10px;
-    padding: 10px 20px;
+  .filterbtn {
+    margin: 0 1em;
+    padding: 0.5em 1em;
     background-color: #99ff99;
     color: #40394A;
     text-decoration: none;
@@ -287,7 +289,7 @@ h5 {
     transition: background-color 0.3s ease;
   }
   
-  .filter-btn:hover {
+  .filterbtn:hover {
     background-color: #40394A;
     color: #99ff99;
   }
@@ -321,14 +323,15 @@ h5 {
   .scroll-wrapper {
     overflow: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent images from wrapping */  
-    width: 30rem;
-    padding: 0 15rem;
+    width: auto;
+    height: 40rem;
+    padding: 0;
     margin: 0 auto;
   }
 
   .scroll-wrapper img {
-    width: 100%; /* Set width for each image */
-    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Set width for each image */
+    height: 100%; /* Maintain aspect ratio */
   }
 
   /* --- Video --- */
@@ -477,15 +480,24 @@ h5 {
     margin: 1em 0;
   }
 
+  .filternav{
+    align-items: center;
+  }
+  
+  .filterbtn{
+    margin-top: 1em;
+  }
+
   h1 {
     margin-top: 3em;
     text-align: center;
     margin-left: 0em;
     }
     
-    p {
-      max-width: 90%;
-    }
+  p {
+    max-width: 90%;
+    padding: 1em 3em;
+  }
 
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -497,10 +509,12 @@ h5 {
 
 }
 
-
-
 .bd-placeholder-img-lg {
   font-size: 3.5rem;
+}
+
+.scroll-wrapper {
+  height: 30rem;
 }
     
 }  
