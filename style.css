@@ -125,10 +125,10 @@ body{
 
 
   h4 {
-    margin-top: 100px;
+    margin-top: 50px;
     font-weight: bold;
     font-family: 'Poppins';
-    font-size: 40px;
+    font-size: 1.5em;
     color: black;
     text-align: center;
   }
@@ -153,6 +153,14 @@ p {
   color: #40394A;
   padding: 1em 20em;
   line-height: 1.6;
+}
+
+.caption {
+    font-family: 'montserrat';  
+    font-style: italic;
+    text-align: center;
+    padding: 0.2em 5em;
+    color: #555;
 }
 
   /* --- Buttons --- */
@@ -216,7 +224,7 @@ p {
 
   .container img{
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     filter: grayscale(90%);
     cursor: crosshair;
@@ -340,6 +348,7 @@ p {
     width: auto; /* Set width for each image */
     height: 100%; /* Maintain aspect ratio */
   }
+
 
 
   /* --- Video --- */
