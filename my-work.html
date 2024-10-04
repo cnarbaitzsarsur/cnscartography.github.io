@@ -35,7 +35,7 @@
       </div>
 
       <div class="grid">
-
+        
         <div class="container" data-filter="map-design">
           <a href="./mapoteca.html"><img src="images/mapoteca.jpeg" width="100%"></a>
           <div class="text">Mapoteca</div>
@@ -43,17 +43,22 @@
 
         <div class="container" data-filter="map-design research">
           <a href="./foldablemap.html"><img src="images/vienna-secession-map.jpeg" width="100%"></a>
-          <div class="text">Foldable map of Vienna, Ravenstein Preis 2022</div>
+          <div class="text">Foldable map of Vienna <br> - <br> Ravenstein Preis 2022</div>
         </div>
 
         <div class="container" data-filter="map-design spatial-data">
-          <a href="./lichtental-analysis.html"><img src="images/P2Ma-01.jpg" width="100%"></a>
-          <div class="text">Lichtental Analysis</div>
+          <a href="./critical-mapping.html"><img src="images/J-A_critical-mapping1.jpg" width="100%"></a>
+          <div class="text">Social Housing Critical Mapping</div>
         </div>
        
+        <div class="container" data-filter="research">
+          <a href="./mos.html"><img src="images/mos2.png" width="100%"></a>
+          <div class="text">Mapping a biomaterial community <br> - <br> Kunstgewerbe Museum Berlin</div>
+        </div>
+
         <div class="container" data-filter="spatial-data research map-design">
-          <a href="./critical-mapping.html"><img src="images/J-A_critical-mapping1.jpg" height="100%"></a>
-          <div class="text">Social Housing Critical Mapping</div>
+          <a href="./lichtental-analysis.html"><img src="images/P2Ma-01.jpg" height="100%"></a>
+          <div class="text">Lichtental Analysis</div>
         </div>
 
         <div class="container" data-filter="research map-design">
@@ -125,7 +130,7 @@
           <a href="./andes.html"><img src="images/andes-map.jpeg" width="100%"></a>
           <div class="text">Andes crossing</div>
         </div>
-
+        
         <div class="container" data-filter="map-design">
           <a href="./greenpeace.html"><img src="images/greenpeace.jpeg" width="100%"></a>
           <div class="text">Greenpeace</div>
@@ -168,29 +173,7 @@
 
       </div>
 
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const filterBtns = document.querySelectorAll('.filterbtn');
-            const projects = document.querySelectorAll('.container');
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const filter = btn.dataset.filter;
-
-                    projects.forEach(project => {
-                        const projectFilters = project.dataset.filter.split(' ');
-                        if (filter === 'all' || projectFilters.includes(filter)) {
-                            project.style.display = 'block';
-                        } else {
-                            project.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-
-    </script>
-
+      <script type="module" src="./main.js"></script>
   </body>
           
 </html>
