@@ -249,7 +249,7 @@ p {
 
   .container:hover .text {
     color: #fff;
-    opacity: 50%;
+    opacity: 100%;
     transition: opacity 0.3s ease;
     opacity: 1;
     font-size: 1.5em ;
@@ -264,11 +264,11 @@ p {
     opacity: 50%;
     transition: opacity 0.3s ease;
     opacity: 1;
-    font-size: 2em ;
+    font-size: 1.5em;
     transition: opacity 0.6s ease-in-out;
     text-align: center;
     font-family: 'Montserrat';
-    font-weight: 100;
+    font-weight: 200;
   }
 
   .bd-placeholder-img {
