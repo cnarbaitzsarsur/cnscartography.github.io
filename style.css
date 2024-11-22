@@ -97,7 +97,7 @@ body{
   h1 {
     font-weight: bold;
     font-family: 'Poppins';
-    font-size: 4em;
+    font-size: clamp(2rem, 5vw, 4rem);
     color: black;
     text-align: left;
   }
